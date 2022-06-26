@@ -1,5 +1,5 @@
 name: DiscordAFK
 version: ${project.version}
 main: mikeshafter.discordafk.DiscordAFK
-api-version: 1.16
+api-version: 1.14
 depend: [ DiscordSRV, Essentials ]
