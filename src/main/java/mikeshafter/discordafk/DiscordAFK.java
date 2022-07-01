@@ -32,6 +32,7 @@ public final class DiscordAFK extends JavaPlugin implements Listener {
     IUser iUser = event.getAffected();
     Player player = iUser.getBase();
     String name = player.getDisplayName();
-    DiscordUtil.sendMessage(DiscordUtil.getTextChannelById(DiscordSRV.config().get("Channels.global")), "> "+name+" is now AFK!");
+    if (event.getValue()) DiscordUtil.sendMessage(DiscordUtil.getTextChannelById(DiscordSRV.config().get("Channels.global")), "> "+name+" is now AFK!");
+    else DiscordUtil.sendMessage(DiscordUtil.getTextChannelById(DiscordSRV.config().get("Channels.global")), "> "+name+" is no longer AFK!");
   }
 }
